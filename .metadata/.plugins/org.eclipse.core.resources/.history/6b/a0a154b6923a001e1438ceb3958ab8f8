@@ -1,0 +1,18 @@
+package peol;
+
+public class Student {
+private int id;
+private string name;
+Student(int id,string name){
+	id=id1;
+	name=name1;
+}
+public int getid() {
+	return id;
+}
+public string getName() {
+	return name;
+}
+}
+
+

@@ -1,0 +1,54 @@
+package peol;
+
+
+import java.util.*;
+public class replace {
+static int len(String str) {
+int len = 0;
+for (char ch : str.toCharArray()) {
+len++;
+}
+return len;
+}
+static boolean equalsMethod(String s1, String s2) {
+int i = 0;
+while (i < len(s1)) {
+if (s1.charAt(i) == s2.charAt(i)) {
+i++;
+} else {
+return false;
+}
+}
+return true;
+}
+static String replace(String str, String s1, String s2) {
+String nstr = "", nword = "";
+int len = len(str);
+for (int i = 0; i < len; i++) {
+while (i < len && str.charAt(i) != ' ') {
+nword = nword + str.charAt(i);
+i++;
+}
+if (equalsMethod(s1, nword)) {
+nstr = nstr + s2 + " ";
+} else {
+nstr = nstr + nword + " ";
+}
+nword = "";
+}
+return nstr;
+}
+public static void main(String[] args) {
+String str, s1, s2;
+Scanner sc = new Scanner(System.in);
+System.out.print("Enter a string: ");
+str = sc.nextLine();
+System.out.print("Enter the string that has to be changed: ");
+s1 = sc.nextLine();
+System.out.print("Enter string to be replaced: ");
+s2 = sc.nextLine();
+System.out.println(replace(str, s1, s2));
+}
+}
+
+
