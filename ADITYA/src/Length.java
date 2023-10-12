@@ -5,7 +5,7 @@ class Length {
 	for(char i:a) {
 		n++;
 	}
-	return n;
+	return    n;
 }
 	public static void main(String[] args) {
 		System.out.println("Enter the string");
